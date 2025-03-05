@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 25 95% 53%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 20%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 64.9%;
+
+    --accent: 25 95% 53%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 15.9%;
+    --input: 0 0% 15.9%;
+    --ring: 25 95% 53%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+.space-bg {
+  background-color: #000000;
+  background-image: radial-gradient(#ffd700, rgba(255, 215, 0, 0.2) 2px, transparent 40px),
+    radial-gradient(#ffd700, rgba(255, 215, 0, 0.15) 1px, transparent 30px),
+    radial-gradient(#ffd700, rgba(255, 215, 0, 0.1) 2px, transparent 40px),
+    radial-gradient(rgba(255, 215, 0, 0.4), rgba(255, 215, 0, 0.1) 2px, transparent 30px);
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+}
+
+.glow-text {
+  text-shadow: 0 0 5px rgba(255, 215, 0, 0.5), 0 0 15px rgba(255, 215, 0, 0.3);
+}
+
+.nebula-card {
+  background: rgba(15, 15, 15, 0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.1);
+}
+
+/* Parallax styles */
+.parallax-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.parallax-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  will-change: transform;
+}
+
