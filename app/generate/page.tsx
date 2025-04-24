@@ -42,7 +42,7 @@ export default function GeneratePage() {
 
               <div className="relative w-full h-full overflow-hidden" style={{ clipPath: "inset(50px 0px 50px 0px)" }}>
                 <iframe
-                  src="https://agents-course-text-to-image.hf.space"
+                  src="https://black-forest-labs-flux-1-dev.hf.space"
                   width="100%"
                   height="700px"
                   className="relative w-full h-full overflow-hidden"
