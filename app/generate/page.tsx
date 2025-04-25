@@ -59,6 +59,7 @@ export default function GeneratePage() {
             </div>
           </div>
         </div>
+        
       </ParallaxContainer>
     </div>
   )
