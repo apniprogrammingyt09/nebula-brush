@@ -32,27 +32,25 @@ export default function GeneratePage() {
             </p>
 
             {/* Hugging Face Space iframe with top & bottom 50px hidden */}
-            <div className="relative w-full h-[500px] rounded-lg overflow-hidden border border-orange-500/20 shadow-lg shadow-orange-500/10">
-              {!isLoaded && (
-                <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/50">
-                  <Sparkles className="h-12 w-12 animate-spin text-orange-400" />
-                  <p className="mt-4 text-white">Loading AI Generator...</p>
-                </div>
-              )}
+           <div className="relative w-full min-h-[700px] rounded-lg overflow-hidden border border-orange-500/20 shadow-lg shadow-orange-500/10">
+  {!isLoaded && (
+    <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/50">
+      <Sparkles className="h-12 w-12 animate-spin text-orange-400" />
+      <p className="mt-4 text-white">Loading AI Generator...</p>
+    </div>
+  )}
 
-              <div className="relative w-full h-full overflow-hidden" style={{ clipPath: "inset(50px 0px 50px 0px)" }}>
-                <iframe
-                  src="https://black-forest-labs-flux-1-dev.hf.space"
-                  width="100%"
-                  height="700px"
-                  className="relative w-full h-full overflow-hidden"
-                  style={{ border: "none" }}
-                  scrolling="no"
-                  allowFullScreen
-                  onLoad={() => setIsLoaded(true)}
-                />
-              </div>
-            </div>
+  <div className="relative w-full h-full overflow-hidden">
+    <iframe
+      src="https://black-forest-labs-flux-1-dev.hf.space"
+      className="relative w-full min-h-[700px] overflow-hidden"
+      style={{ border: "none" }}
+      scrolling="no"
+      allowFullScreen
+      onLoad={() => setIsLoaded(true)}
+    />
+  </div>
+</div>
 
             <div className="mt-6 flex justify-center">
               <Button variant="nebula" onClick={() => window.location.reload()}>
@@ -65,4 +63,3 @@ export default function GeneratePage() {
     </div>
   )
 }
-
