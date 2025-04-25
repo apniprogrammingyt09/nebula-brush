@@ -42,7 +42,7 @@ export default function GeneratePage() {
 
   <div className="relative w-full h-full overflow-hidden">
     <iframe
-      src="https://black-forest-labs-flux-1-schnell.hf.space"
+      src="https://stabilityai-stable-diffusion.hf.space"
       className="relative w-full min-h-[700px] overflow-hidden"
       style={{ border: "none" }}
       scrolling="no"
